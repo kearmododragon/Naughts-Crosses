@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#board {
+    display: flex;
+    width: 80vmin;
+    flex-wrap: wrap;
+    gap:  1vmin;
+
+}
+
+.square{
+    width: 25vmin;
+    height: 25vmin;
+    border: 1px solid black;
+}
+
+#title{
+    
+}
