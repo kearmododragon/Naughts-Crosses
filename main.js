@@ -6,7 +6,7 @@ const colors = {
   playerO: "#3A6152",
 }
 
-//win scenarios linkrf yo dwustr numbers
+//win scenarios
 const win = [
   [0, 1, 2,],
   [3, 4, 5,],
@@ -25,7 +25,7 @@ const board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 // 2) Define required variables used to track the state of the game
 squareStatus = 0
 let turn = 0
-let currentPlayer = "PX"
+let currentPlayer = "Px"
 let winner = "none"
 // 3) Store elements on the page that will be accessed in code more than once in variables to make code more concise, readable and performant.
 const boardEl = document.querySelector("#board")
