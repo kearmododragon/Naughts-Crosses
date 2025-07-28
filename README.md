@@ -3,7 +3,7 @@ X&Os
 
 - display empty box to start (end of last lesson)
 - player clicks on square to place tile 
-- alternate clicks swap betwee X and O
+- alternate clicks swap between X and O
 - option to restart
 
 bonus:

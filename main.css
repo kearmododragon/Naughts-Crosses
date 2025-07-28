@@ -26,6 +26,14 @@ body {
   font-size: 30px;
   color: rgb(248, 9, 216);
   text-align: center;
+  margin-bottom: 0;
+}
+.title + h2 {
+  font-size: 15px;
+  color: rgb(248, 9, 216);
+  text-align: center;
+  margin-top: 0; 
+  font-weight: normal; 
 }
 /*Game Board*/
 #board {
@@ -35,41 +43,51 @@ body {
   margin: auto;
   color: aliceblue;
 }
-
 .square {
   width: 75px;
   height: 75px;
-  border: 2px solid white;
+  border: 2px solid white;          
   background-color: rgb(248, 9, 216);
-  box-shadow: 0 0 0 2px;
-  color: white;
+  box-shadow: 0 0 0 2px white;     
+  color: white;                     
   font-size: 50px;
-
   display: flex;
   justify-content: center;
-  align-items: center;     
+  align-items: center;
   text-align: center;
-
   padding: 0;
   margin: 0;
   line-height: 1;
-  cursor: pointer;
 }
 /*Menu and Buttons*/
 #menu {
   display: grid;
-  grid-template-columns: repeat(3, 75px);
+  grid-template-columns: 75px 75px 75px;
   width: 225px;
+  margin: 0 auto;
   text-align: center;
   color: white;
-  margin: 0;
-  row-gap: 5px;
-  justify-items: center;
+  column-gap: 0;
+  justify-content: center;
+  align-items: start;
 }
-
-#menu h2,
-#menu .restartButton {
-  justify-self: center;
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+.middle-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+}
+#timer {
+  font-size: 24px;
+  color: rgb(248, 9, 216);
+  margin: 0;
 }
 .restartButton {
   width: 75px;
@@ -79,38 +97,50 @@ body {
   font-weight: bold;
   font-size: 16px;
   border: none;
-  border-radius: 50%; /* 👈 makes it a perfect circle */
+  border-radius: 50%; /* circle */
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* optional: adds a nice shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
 }
-
 .restartButton:hover {
-  transform: scale(1.05); /* slight zoom on hover */
+  transform: scale(1.05);
   background-color: gold;
 }
+.restartButton:disabled,
+.restartButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+.resetScoresButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
-.player {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.resetScoresButton:hover {
+  background-color: orange;
 }
 
 .score {
   font-size: 16px;
   margin: 0;
 }
-
 #x {
   color: #003cff;
 }
-
 #o {
   color: #50d61b;
 }
@@ -120,4 +150,3 @@ body {
   text-align: center;
   margin-top: 20px;
 }
-

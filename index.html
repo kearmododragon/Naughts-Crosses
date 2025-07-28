@@ -13,6 +13,10 @@
 <body>
     <div class="wrapper">
         <h1 class="title">Welcome to Ciaran's Naughts and Crosses.</h1>
+        <h2 class="title"> First to 10.</h2>
+        <button id="resetScoresButton" class="resetScoresButton" style="display: none;">
+            Reset Scores
+        </button>
         <section id="board">
             <div class="square" squareIndex="0"></div>
             <div class="square" squareIndex="1"></div>
@@ -31,13 +35,16 @@
                 <h2 id="x">X</h2>
                 <p class="score"><span id="xScore">0</span></p>
             </div>
-            <button id="restartButton" class="restartButton">Restart</button>
+            <div class="middle-column">
+                <button id="restartButton" class="restartButton">Restart</button>
+                <p id="timer">00:00</p>
+            </div>
             <div class="player">
                 <h2 id="o">O</h2>
                 <p class="score"><span id="oScore">0</span></p>
             </div>
         </section>
-        <p id="statusText">Game status will go here</p>
+        <p id="statusText"></p>
 
     </div>
 </body>
