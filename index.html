@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="main.css" rel = "stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="main.js" defer></script>
 
     <title>Naughts and Crosses</title>
 </head>
+
 <body>
     <div class="wrapper">
-    <h1 class="title">Welcome to Ciaran's Naughts and Crosses.</h1>
-    <section id ="board">
-        <div class="square" id="0">X</div>
-        <div class="square" id="1">O</div>
-        <div class="square" id="2">X</div>
-        
-        <div class="square" id="3
-        ">X</div>
-        <div class="square" id="4">X</div>
-        <div class="square" id="5">X</div>
+        <h1 class="title">Welcome to Ciaran's Naughts and Crosses.</h1>
+        <section id="board">
+            <div class="square" squareIndex="0"></div>
+            <div class="square" squareIndex="1"></div>
+            <div class="square" squareIndex="2"></div>
 
-        <div class="square" id="6
-        ">O</div>
-        <div class="square" id="7
-        ">O</div>
-        <div class="square" id="8">O</div>
-    </section>
-    <section id="menu">
-        <h2 id="P1">X</h2>
-        <button class="button">Restart</button> 
-        <h2 id="P2">O</h2>
-    </section>
+            <div class="square" squareIndex="3"></div>
+            <div class="square" squareIndex="4"></div>
+            <div class="square" squareIndex="5"></div>
+
+            <div class="square" squareIndex="6"></div>
+            <div class="square" squareIndex="7"></div>
+            <div class="square" squareIndex="8"></div>
+        </section>
+        <section id="menu">
+            <div class="player">
+                <h2 id="x">X</h2>
+                <p class="score"><span id="xScore">0</span></p>
+            </div>
+            <button id="restartButton" class="restartButton">Restart</button>
+            <div class="player">
+                <h2 id="o">O</h2>
+                <p class="score"><span id="oScore">0</span></p>
+            </div>
+        </section>
+        <p id="statusText">Game status will go here</p>
+
     </div>
 </body>
+
 </html>

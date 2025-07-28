@@ -33,15 +33,15 @@ body {
   grid-template-columns: repeat(3, 75px); 
   width: 225px;
   margin: auto;
+  color: aliceblue;
 }
 
 .square {
   width: 75px;
   height: 75px;
   border: 2px solid white;
-  background-color: black;
+  background-color: rgb(248, 9, 216);
   box-shadow: 0 0 0 2px;
-
   color: white;
   font-size: 50px;
 
@@ -53,6 +53,7 @@ body {
   padding: 0;
   margin: 0;
   line-height: 1;
+  cursor: pointer;
 }
 /*Menu and Buttons*/
 #menu {
@@ -62,31 +63,61 @@ body {
   text-align: center;
   color: white;
   margin: 0;
+  row-gap: 5px;
+  justify-items: center;
 }
+
 #menu h2,
-#menu .button {
+#menu .restartButton {
   justify-self: center;
 }
-.button {
+.restartButton {
   width: 75px;
   height: 75px;
   background-color: yellow;
   color: black;
-  border: none;
   font-weight: bold;
   font-size: 16px;
-  border-radius: 6px;
+  border: none;
+  border-radius: 50%; /* 👈 makes it a perfect circle */
   cursor: pointer;
 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* optional: adds a nice shadow */
+  transition: transform 0.2s ease;
 }
-/*Player Colours*/
-#P1 {
+
+.restartButton:hover {
+  transform: scale(1.05); /* slight zoom on hover */
+  background-color: gold;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score {
+  font-size: 16px;
+  margin: 0;
+}
+
+#x {
   color: #003cff;
 }
-#P2 {
+
+#o {
   color: #50d61b;
 }
+#statusText {
+  font-size: 30px;
+  color: rgb(248, 9, 216); /* Matches title */
+  text-align: center;
+  margin-top: 20px;
+}
+
